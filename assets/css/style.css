@@ -1,0 +1,621 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#home {
+    
+    background-image: url(../images/background-black.jpg);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/**************************** nav **************************************/
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(360deg, rgba(255,255,255,0.0) 0%, rgba(0,0,0,1) 70%);
+    z-index: 9;
+}
+
+nav img {
+    width:250px;
+    padding: 20px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    margin: 0 auto;
+    
+}
+
+
+.gauche {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+
+.droite {
+    width: 50%;
+    display: flex;
+    margin: 0 25px;
+    padding: 5px;
+}
+
+.search {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search a {
+    width: 30%;
+    text-align: center;
+}
+
+.search input {
+    height: 25px;
+    width: 50%;
+    color: #fff;
+    background-color: transparent;
+}
+
+.search .searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+i.fa-magnifying-glass {
+    color: #fff;
+    cursor: pointer;
+    padding-right: 10px;
+    opacity: 1;
+}
+
+.searchbar input {
+    background-color: rgb(255, 255, 255, .2);
+    border-radius: none;
+    margin-right: 5px;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: larger;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #fff;
+    transform: scale(1.2);
+    font-weight: 500;
+    text-shadow: 1px  1px 1px #033c63;
+}
+
+
+
+/**************************** profil *************************************/
+
+
+#profil, #films {
+    background-color: #0B132B;
+}
+
+h1 {
+    color: #fff;
+}
+
+.content {
+    margin-top: 150px;
+    margin: 0 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.profil a img{
+   border: 2px solid transparent; 
+   transition: 0.3s;
+   width: 50%;
+   border-radius: 8px;
+   
+}
+
+.profil:hover img{
+    border: 2px solid #fff;
+}
+
+.pseudo {
+    color: #696a6b;
+}
+
+.profil:hover .pseudo {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.btn-profil {
+    text-transform: uppercase;
+    border: 1px solid #696a6b;
+    color: #696a6b;;
+    padding: 0.5em 1.5em;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: all ease-in-out 0.3s;
+}
+
+.btn-profil:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/******************** integrer bande annonce bannier ******************/
+
+#films nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+video, .overlay {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+figcaption {
+
+    font-size: 50px;
+    color: #fff;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+
+}
+
+figcaption h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.spantitre {
+    background-color: rgb(197, 2, 2);
+    color: #000;
+    font-size: 1rem;
+    padding: 10px;
+    padding-bottom: 0;
+    font-weight: bolder;
+
+}
+
+.lecture {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.infos {
+    padding: 10px;
+    background-color: rgba(144, 145, 145, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+} 
+
+.fa-play  {
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.fa-circle-info {
+    margin-right: 10px;
+    margin-bottom:10px ;
+    color: #fff;
+}
+
+.infos:hover {
+    background-color: rgba(144, 145, 145, 0.5);
+}
+
+.lecture:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.overlay {
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,1) 100%);
+    opacity: .8;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+
+}
+/* .overlay:last-child { margin-bottom: 0; } */
+
+  
+  
+/**************************** carousel  **************************************/
+
+section .row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.carousel img {
+    width: 100%;
+    padding: 10px;
+
+}
+
+.row h2 {
+    margin-top: 20px;
+    margin-left: 16px;
+    color: #fff;
+}
+
+
+
+/*************************** Film hover ***********************************/
+
+.bandeau {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadre{
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    /* display: flex; */
+}
+
+.cadre1{
+    display: flex;
+    /* flex-direction: row; */
+    width: 150px;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.cadre1:hover{
+    width: 250px;
+    height: 250px;
+    margin-top: -50px;
+    transition: 0.5s ease-in-out;
+}
+
+.div2{
+display: none;
+margin-bottom: 10%;
+}
+
+.cadre1:hover .div2{
+    display: block;
+    margin-bottom:  10%;
+}
+
+
+.cadre1:hover .div1{
+    display: none;
+}
+/**************************** slider **************************************/
+
+.slider {
+    margin-top: 42px;
+    height: 60vh;
+    position: relative;
+}
+
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+#next, #precedent {
+    color: #ffffff63;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50px);
+    cursor: pointer;
+}
+
+#next {
+    right: 1rem;
+}
+
+#precedent {
+    left: 1rem;
+}
+
+/**************************** login **************************************/
+
+div.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    overflow: hidden;
+    
+}
+
+form {
+    background-color: rgb(0, 0, 0,0.75);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    color: #fff;
+    font-size: 16px;
+
+}
+
+input {
+    padding: 16px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color:rgb(176, 229, 253,0.8) ;
+    opacity: 1;
+    outline: none;
+    
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]{
+    cursor: pointer;
+    opacity: 1;
+}
+
+input[type=email]:hover, input[type=password]:hover, input[type=text]:hover {
+    cursor: pointer;
+    background-color: #b0e5fb;
+}
+
+input[type=submit] {
+    background-color: #065F9B;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+label {
+    color: #fff;
+    margin-left: 8px;
+}
+
+.checkbox, .direction {
+    color: #696a6b ;
+    margin: 5px;
+}
+
+.direction {
+    text-align: center;
+}
+
+.direction a {
+    text-decoration: none;
+    color: #fff;
+}
+
+input[type=submit]:hover {
+    background-color: #033c63;
+    cursor: pointer;
+}
+
+
+
+
+/**************************** Description Film **************************************/
+
+.conteneur {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0 auto;
+    flex-direction: column;
+}    
+
+
+.video video {
+    width: 100%;
+    height: 400px;
+    padding: 50px;
+    
+
+}
+
+.description {
+    width: 100%;
+    padding: 50px;
+
+}
+
+.description p {
+    text-align: justify;
+    color: #fff;
+
+}
+
+.casting {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cast {
+    width: 100%;
+
+}
+.cast img {
+    width: 20%;
+    padding: 25px;
+
+}
+
+
+/**************************** footer **************************************/
+
+footer {
+    width: 100%;
+    background-color: #191a1a;
+    z-index: 9;
+    color: #909191;
+}
+
+footer .fa-brands {
+    padding: 10px ;
+    cursor: pointer;
+    color: #909191;
+}
+
+footer .colonnes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/**************************** SCREEN **************************************/
+
+@media only screen and (max-width: 900px){
+    nav {
+        height: 80px;
+    }
+    nav img {
+        width: 150px;
+    }
+    .profil img{
+        width: 50%;
+    }
+    .droite {
+        margin: 0 10px;
+    }
+   .navbar{
+        font-size: 12px;
+   }
+
+    figcaption h2 {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    nav {
+        height: 50px;
+    }
+    nav img {
+        width: 100px;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
+    .profil img{
+        width: 30%;
+    }
+    figcaption h2 {
+        font-size: 1rem;
+    }
+ 
+    .row h2{
+        margin-top: 160px;
+    }
+    .carousel{
+        flex-direction: column;
+    }    
+    footer {
+        font-size: 14px;
+    }
+    footer .colonnes {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+
+}
