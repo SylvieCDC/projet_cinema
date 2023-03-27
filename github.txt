@@ -1,0 +1,23 @@
+PS C:\wamp64\www\projet_cinema> git init
+(Initialized empty Git repository in C:/wamp64/www/projet_cinema/.git/)
+
+PS C:\wamp64\www\projet_cinema> 
+PS C:\wamp64\www\projet_cinema> git add . (rajouter tous les fichiers)
+
+PS C:\wamp64\www\projet_cinema> git commit -m "version 1" (valider les changements et écrire ce qu'on a rajouter/retirer entre guillemets)
+
+PS C:\wamp64\www\projet_cinema> git remote add origin https://github.com/SylvieCDC/projet_cinema.git (on link à distance les dossier sur github)
+
+PS C:\wamp64\www\projet_cinema> git branch -M main 
+>> git push -u origin main (on push tout dans main)
+
+PS C:\wamp64\www\projet_cinema> git branch dev (on crée une branche)
+
+PS C:\wamp64\www\projet_cinema> git checkout dev (on switch de branche : on se place sur la branche choisie pour travailler)        
+
+PS C:\wamp64\www\projet_cinema> git add .   (on y ajoute tous les dossiers modifiés)  
+
+PS C:\wamp64\www\projet_cinema> git commit -m " zone de travail" (on valide avec message d'info)
+
+PS C:\wamp64\www\projet_cinema> git push -u origin dev (on push (enregistre) nos modifications sur la branche dev sur github)
+

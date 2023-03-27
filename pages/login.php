@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/messerror.css">
     
 
     <title>CinéFlix Accueil</title>
@@ -24,10 +25,10 @@ include('nav.php');
    
     <div class="content">
         <div class="row">
-            <form action="profil.php" method="post">
+            <form action="../config/login_ttt.php" method="post">
                 <h2>S'identifier</h2>
                 <input type="email" name="email" id="email" placeholder="Entrer votre email">
-                <input type="password" name="password" id="password" placeholder="Mot de passe">
+                <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Mot de passe">
                 <input type="submit" value="Connexion">
                 <div class="checkbox">
                     <input type="checkbox" name="save" id="save">

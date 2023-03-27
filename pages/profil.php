@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/messerror.css">
     <title>Profil</title>
 </head>
 <body id="profil">
@@ -19,7 +25,7 @@ include("nav.php");
         <h1>Qui est-ce ?</h1>
         <div class="row">
             <div class="profil">
-                <a href="">
+                <a href="../index.php">
                     <img src="../assets/images/avatars/avatar-1.png" alt="">
                     <p class="pseudo">Lorem</p>
                 </a>

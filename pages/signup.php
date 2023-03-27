@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/messerror.css">
 
     <title>CinéFlix Accueil</title>
 
@@ -23,14 +28,14 @@ include('nav.php');
    
     <div class="content">
         <div class="row">
-            <form action="#" method="post">
+            <form action="../config/signup_ttt.php" method="post">
                 <h2>Créer un compte</h2>
                 <input type="text" name="nom" id="nom" placeholder="Nom">
                 <input type="text" name="prenom" id="prenom" placeholder="Prénom">
-                <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
                 <input type="email" name="email" id="email" placeholder="Entrer votre email">
-                <input type="password" name="password" id="password" placeholder="Mot de passe">
-                <input type="password" name="password" id="password" placeholder="Confirmer mot de passe">
+                <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
+                <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Mot de passe">
+                <input type="password" name="motdepasseverif" id="motdepasseverif" placeholder="Confirmer mot de passe">
                 <input type="submit" value="Enregister">
                 <div class="checkbox">
                     <input type="checkbox" name="save" id="save">
