@@ -10,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/messerror.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
     <title>Profil</title>
 </head>
 <body id="profil">
@@ -23,7 +23,7 @@ include("nav.php");
 
     <section class="content">
         <h1>Qui est-ce ?</h1>
-        <div class="row">
+        <div class="row_gestion_profil">
             <div class="profil">
                 <a href="../index.php">
                     <img src="../assets/images/avatars/avatar-1.png" alt="">
@@ -56,8 +56,13 @@ include("nav.php");
             </div>
 
         </div>
+        
+    </section>
+
+</body>
+</html>
         <div class="row">
-            <a class="btn-profil" href="../pages/gestion_profil.php">Gérer les profils</a>
+            <a class="btn-profil" href="gestion_profil.php">Gérer les profils</a>
         </div>
     </section>
 

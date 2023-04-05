@@ -1,0 +1,5 @@
+Enregistrer les données dans des variables (surtout celles de mes tables de cardinalité)
+Enregister  film : insert into
+récupérer lastId du film
+récupérer les Id de mes cardinalités (tableaux associés à film)
+    -->dans chaque table il y aura un foreach avec insert

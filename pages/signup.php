@@ -28,7 +28,7 @@ include('nav.php');
    
     <div class="content">
         <div class="row">
-            <form action="../config/signup_ttt.php" method="post">
+            <form class="form" action="../config/signup_ttt.php" method="post">
                 <h2>Créer un compte</h2>
                 <input type="text" name="nom" id="nom" placeholder="Nom">
                 <input type="text" name="prenom" id="prenom" placeholder="Prénom">

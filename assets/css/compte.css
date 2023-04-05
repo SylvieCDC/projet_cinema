@@ -1,0 +1,80 @@
+.fa-paypal{
+    margin-right:  10px;
+}
+
+span.group {
+    float: left;
+    width: 50%;
+}
+
+.titreMembre {
+    margin: auto 20px;
+    font-size: 14px;
+}
+
+.abonnement {
+    background: #e4e4e4;
+    color: black;
+    border: none;
+    transition: all 0.3s;
+}
+
+a{
+    color:#bebebe;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#fff;
+}
+
+input[type="checkbox"] {
+    accent-color: grey;
+}
+
+#avatar{
+    width: 100px;
+}
+
+.abonnement:hover {
+    background: #f1f1f1;
+    color: black;
+    border: none;
+}
+@media screen and (max-width: 1000px) {
+    .paypal-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .paypal-container div {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  .btn-outline-secondary {
+    margin-left: 10px;
+  }
+  .basis33 a {
+    flex-basis: 50%;
+  }
+  
+
+  @media screen and (max-width: 840px){
+    #avatar{
+        width: 60px;
+    }
+  }
+
+  @media screen and (max-width: 380px){
+    #avatar{
+        width: 50px;
+    }
+    .btn {
+        font-size: smaller;
+    }
+  }
+
+
+ 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connx.php';
+require 'connx.php';
 
 ?>
 
@@ -28,36 +28,48 @@ if (isset($email, $motdepasse) && !empty($email) && !empty($motdepasse))
     $stmt->execute(['email_utilisateurs' => $email]);
     $utilisateur = $stmt->fetch();
     $utilisateurcount = $stmt->rowCount();
+   
+        
 
     if ($utilisateurcount == 0){
         echo "L'utisateur n'existe pas ";
     }
     else {
-        if (password_verify($motdepasse, $utilisateur["mot_de_passe_utilisateurs"])) {
+        if (password_verify($motdepasse, $utilisateur["mot_de_passe_utilisateurs"]) or (is_array($utilisateur))) {
+
+            $role = $utilisateur["Id_roles"];
+            $rolestmt = $db -> prepare ("SELECT * FROM utilisateurs WHERE Id_roles = ?");
+
+            $rolestmt-> execute([$role]);
+            
+
+
             // Création de la session utilisateur
             $_SESSION["id_utilisateurs"] = $utilisateur["Id_utilisateurs"];
             $_SESSION["pseudo"] = $utilisateur["pseudo_utilisateurs"];
             $_SESSION["avatar"] = $utilisateur["Id_images_profil"];
+            $_SESSION["id_roles"] = $role;
+            
 
             header("location:../pages/profil.php");
         
 
     }else{
         echo"<div class='mess_inscription'>Email ou mot de passe incorrect.<br>
-        <a href='./login.php' class='inscription_lien'>Je me connecte</a></div>";
+        <a href='../pages/login.php' class='inscription_lien'>Je me connecte</a></div>";
     }
     }
 
     }
     else {
         echo"<div class='mess_inscription'>Ce n'est pas une adresse mail valide<br>
-        <a href='./login.php' class='inscription_lien'>Je me connecte</a></div>";
+        <a href='../pages/login.php' class='inscription_lien'>Je me connecte</a></div>";
     }
 
 }
 else {
     echo"<div class='mess_inscription'>Merci de remplir tous les champs<br>
-    <a href='./login.php' class='inscription_lien'>Je me connecte</a></div>";
+    <a href='../pages/login.php' class='inscription_lien'>Je me connecte</a></div>";
 }
 
 

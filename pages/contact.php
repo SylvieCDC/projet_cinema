@@ -1,7 +1,19 @@
 <?php
 session_start();
 
-?>
+//         if (!empty($_POST['nom']) && !empty($_POST['email']) && !empty($_POST['message'])){
+//         $nom = htmlspecialchars($_POST['nom']);
+//         $email = htmlspecialchars($_POST['email']);
+//         $message = htmlspecialchars($_POST['message']);
+
+//         if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+// // metre action par requête
+//         } else {echo 'Email non valide';}
+//     } else  {
+//         header("location: ../index.php");
+//         die;
+//     }
+    ?>
 
 
 <!DOCTYPE html>
@@ -15,14 +27,14 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/messerror.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
     
 
-    <title>CinéFlix Accueil</title>
+    <title>CinéFlix Contact</title>
 
 
 </head>
-<body>
+<body id="home">
 
 <!-- <nav> -->
 <?php 
@@ -55,16 +67,15 @@ include('nav.php');
 
             <div class="contact-droite">
 
-                <form action="https://formspree.io/f/xvonzynp" method="post"> <!--Envoie les données recueillies sur mon mail en passant par FormSpree-->
-                    <input type="text" name="Nom" placeholder="Veuillez saisir votre nom" required>
-                    <input type="email" name="Email" placeholder="Veuillez saisir votre email" required>
-                    <textarea name="Message" rows="6" placeholder="Votre message" required></textarea>
+                <form  class="form" action="#" method="post"> 
+                    <input type="text" name="nom" placeholder="Veuillez saisir votre nom" required>
+                    <input type="email" name="email" placeholder="Veuillez saisir votre email" required>
+                    <textarea name="message" rows="6" placeholder="Votre message" required></textarea>
                     <button type="submit" class="btn btn2">Envoyer</button>
                 </form>
 
             </div>
         </div>
-
 
 
 

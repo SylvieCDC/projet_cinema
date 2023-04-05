@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connx.php';
+require 'connx.php';
 ?>
 
 
